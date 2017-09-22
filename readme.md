@@ -20,10 +20,13 @@ Start fault and tault from their respective directories using gradle.
 
 Next, we will hit the chaining endpoint in the fault service.
 
+```
 $ curl localhost:8080/chaining
 Hello from Taulty!with delay%     
+```
 
 The tault service will read the request and inject an artificial delay.
+This shows how an already instrumented system can leverage injection and extraction facilities of open tracing for fault injection.
 
 You can also look at the traces at http://localhost:9411
 
