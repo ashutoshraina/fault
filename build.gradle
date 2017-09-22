@@ -1,8 +1,11 @@
-group 'external'
-version '1.0-SNAPSHOT'
+plugins {
+    id 'org.springframework.boot' version '1.5.7.RELEASE'
+}
 
 apply plugin: 'java'
 
+group 'external'
+version '1.0-SNAPSHOT'
 sourceCompatibility = 1.8
 
 repositories {
