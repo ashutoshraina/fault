@@ -1,7 +1,12 @@
 Start by cloning the following repos
-1)git clone git@github.com:ashutoshraina/fault.git 
+
+```
+1)git clone git@github.com:ashutoshraina/fault.git
+
 2)git clone git@github.com:ashutoshraina/tault.git 
+
 3)git clone git@github.com:ashutoshraina/tingu.git
+```
 
 Build and Publish locally tingu. 
 This has no material impact on the demo since we are not using the `CowardTracer`. This can be done using gradle.
