@@ -6,6 +6,7 @@ import brave.opentracing.BraveTracer;
 import brave.sampler.Sampler;
 import io.opentracing.Tracer;
 import io.opentracing.contrib.okhttp3.TracingInterceptor;
+import io.opentracing.extensions.faultinjection.CowardTracer;
 import okhttp3.OkHttpClient;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.SpringApplication;
@@ -35,14 +36,18 @@ public class Application {
                 .traceId128Bit(true)
                 .sampler(Sampler.ALWAYS_SAMPLE)
                 .build();
+//        return new CowardTracer(BraveTracer.create(braveTracer));
         return BraveTracer.create(braveTracer);
     }
 
     @Bean
     public OkHttpClient httpClient(@Qualifier("zipkinTracer") Tracer tracer) {
         TracingInterceptor tracingInterceptor = new TracingInterceptor(tracer, Arrays.asList());
+//        FaultInterceptor faultInterceptor = new FaultInterceptor(new CowardTracer(tracer));
+
         return new OkHttpClient.Builder()
                 .addInterceptor(tracingInterceptor)
+//                .addInterceptor(faultInterceptor)
                 .addNetworkInterceptor(tracingInterceptor)
                 .build();
     }

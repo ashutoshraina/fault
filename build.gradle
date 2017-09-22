@@ -7,6 +7,7 @@ sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+    mavenLocal()
 }
 
 dependencies {
@@ -15,6 +16,7 @@ dependencies {
     compile("io.opentracing.contrib:opentracing-spring-web-autoconfigure:0.0.9")
     compile("io.opentracing.brave:brave-opentracing:0.21.1")
     compile("io.zipkin.reporter:zipkin-sender-okhttp3:0.10.0")
-    compile 'io.opentracing.contrib:opentracing-okhttp3:0.0.4'
+    compile("io.opentracing.contrib:opentracing-okhttp3:0.0.4")
+    compile("faultinjection:opentracing-faultinjection:0.1")
 
 }

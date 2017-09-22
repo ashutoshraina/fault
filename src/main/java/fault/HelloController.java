@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
 @RestController
@@ -23,7 +24,7 @@ public class HelloController {
     private Tracer tracer;
 
     @RequestMapping("/hello")
-    public String hello() {
+    public String hello(HttpServletRequest httpServletRequest) {
         return "Hello";
     }
 
