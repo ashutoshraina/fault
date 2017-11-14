@@ -20,6 +20,6 @@ dependencies {
     compile("io.opentracing.brave:brave-opentracing:0.21.1")
     compile("io.zipkin.reporter:zipkin-sender-okhttp3:0.10.0")
     compile("io.opentracing.contrib:opentracing-okhttp3:0.0.4")
-    compile("faultinjection:opentracing-faultinjection:0.1")
+   // compile("faultinjection:opentracing-faultinjection:0.1")
 
 }

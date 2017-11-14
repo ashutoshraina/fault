@@ -6,7 +6,6 @@ import brave.opentracing.BraveTracer;
 import brave.sampler.Sampler;
 import io.opentracing.Tracer;
 import io.opentracing.contrib.okhttp3.TracingInterceptor;
-import io.opentracing.extensions.faultinjection.CowardTracer;
 import okhttp3.OkHttpClient;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.SpringApplication;
